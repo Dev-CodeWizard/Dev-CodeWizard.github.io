@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: #fff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: black;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .hero button {
+            background-color: #ffcc00;
+            color: #181818;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border: 6px solid #ffcc00;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            width: 50%;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+        }
+
+        .about-content p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .about-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .about-buttons button {
+            background-color: #ffcc00;
+            color: #181818;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .skills {
+            background-color: black;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 5px;
+            background-color: #ffcc00;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .skill-percentage {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+        }
+
+        .skill-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #111;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+        }
+
+        .skill-box-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .skill-box-percentage {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .projects {
+            background-color: black;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #111;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .project-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project-item h3 {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-item p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="hero" class="hero">
+        <div>
+            <img src="1st.jpg" alt="Dev" width="300" height="300">
+        </div>
+        <h1>I'm Dev</h1>
+        <p>Computer Science Student </p>
+        <p> From ASOSE Lajpat Nagar</p>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="2nd.jpg" alt="Dev" width="300" height="300">
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>I am Dev from SOSE Lajpat Nagar, I'am a Computer Science Student. I have a keen interest in web development and love to create beautiful and functional websites </p>
+            <div class="about-buttons">
+                <button>View My Skills</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p>Hello, I'm Dev. I'm a computer science student. I learned web development in the 11th grade, though I'm not expert yet. Currently, I'm studying JavaScript and React in the 12th grade, and I'm doing okay, with occasional mistakes.</p>
+        <div class="skill-list">
+            <div class="skill-box">
+                <div class="skill-box-text">Python</div>
+                <div class="skill-box-percentage">90%</div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-box-text">Html</div>
+                <div class="skill-box-percentage">80%</div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-box-text">CSS</div>
+                <div class="skill-box-percentage">95%</div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-box-text">Javascript</div>
+                <div class="skill-box-percentage">85%</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Side Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="project1.png" alt="Project 1" width="300" height="300">
+                <h3>Calculator</h3>
+                <p>" I have created a calculator in Python using tkinter. "</p>
+            </div>
+            <div class="project-item">
+                <img src="project2.png" alt="Project 2" width="300" height="300">
+                <h3>Matplotlib</h3>
+                <p>"I have plotted graphs using matplotlib in Python and also created a program to calculate the area of a triangle."</p>
+            </div>
+            <div class="project-item">
+                <img src="Project3.png" alt="Project 3" width="300" height="200">
+                <h3>KFC Web page</h3>
+                <p>I created a prototype of the KFC web page using HTML and CSS in web development.</p>
+            </div>
+            <div class="project-item">
+                <img src="project4.png" alt="Project 4" width="300" height="200">
+                <h3>Netflix Web page</h3>
+                <p>I created a prototype of the Netflix Web page using HTML and CSS in web development</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
