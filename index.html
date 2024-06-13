@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             background-color: black;
@@ -16,10 +17,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem;
+            font-size: 20px;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             font-weight: bold;
         }
 
@@ -59,6 +61,7 @@
             height: 350px;
             border: 6px solid #ffcc00;
             border-radius: 10px;
+            margin-left: 000px;
         }
 
         .hero button {
@@ -236,6 +239,62 @@
             font-size: 1rem;
             margin-top: 0.5rem;
         }
+
+        .contact {
+            background-color: #111;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ffcc00;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact .form-group {
+            margin-bottom: 1rem;
+            width: 70%;
+        }
+
+        .contact label {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #666;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contact button[type="submit"] {
+            background-color: #ffcc00;
+            color: #181818;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact button[type="submit"]:hover {
+            background-color: #fff;
+            color: #181818;
+        }
     </style>
 </head>
 <body>
@@ -252,8 +311,12 @@
     </div>
 
     <section id="hero" class="hero">
-        <div>
-            <img src="1st.png" alt="Dev1" width="300" height="300">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1st.png" alt="Dev1" width="300" height="300"></div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
         <h1>I'm Dev</h1>
         <p>Computer Science Student </p>
@@ -267,11 +330,12 @@
         <div class="about-content">
             <h2>About Me</h2>
             <p>I am Dev from SOSE Lajpat Nagar, I'am a Computer Science Student. I have a keen interest in web development and love to create beautiful and functional websites </p>
-          <div class="about-buttons">
+            <div class="about-buttons">
                 <a href="https://www.linkedin.com/in/prince-kashyap-8181612b1/" target="_blank">
                     <button>Contact</button>
                 </a>
             </div>
+            
         </div>
     </section>
 
@@ -324,8 +388,39 @@
         </div>
     </section>
 
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+
             const navLinks = document.querySelectorAll("nav ul li a");
 
             navLinks.forEach(link => {
