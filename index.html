@@ -166,6 +166,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            animation: fillProgress 2s forwards; 
         }
 
         .skill-percentage {
@@ -295,6 +296,16 @@
             background-color: #fff;
             color: #181818;
         }
+
+        /* Animation to fill the progress bar */
+        @keyframes fillProgress {
+            from {
+                width: 0%;
+            }
+            to {
+                width: var(--percentage);
+            }
+        }
     </style>
 </head>
 <body>
@@ -345,18 +356,30 @@
         <div class="skill-list">
             <div class="skill-box">
                 <div class="skill-box-text">Python</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--percentage: 75%;"></div>
+                </div>
                 <div class="skill-box-percentage">75%</div>
             </div>
             <div class="skill-box">
                 <div class="skill-box-text">Html</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--percentage: 80%;"></div>
+                </div>
                 <div class="skill-box-percentage">80%</div>
             </div>
             <div class="skill-box">
                 <div class="skill-box-text">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--percentage: 80%;"></div>
+                </div>
                 <div class="skill-box-percentage">80%</div>
             </div>
             <div class="skill-box">
                 <div class="skill-box-text">Javascript</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="--percentage: 70%;"></div>
+                </div>
                 <div class="skill-box-percentage">70%</div>
             </div>
         </div>
@@ -435,7 +458,17 @@
                     }
                 });
             });
+
+            const skillBoxes = document.querySelectorAll(".skill-box");
+
+            skillBoxes.forEach(box => {
+                const percentage = box.querySelector(".skill-box-percentage").textContent;
+                const progressBar = box.querySelector(".skill-progress");
+                progressBar.style.setProperty("--percentage", percentage);
+            });
         });
     </script>
 </body>
 </html>
+
+
